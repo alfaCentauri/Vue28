@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+    Created on : 08/05/2019, 10:11:00 AM
+    Author     : Ricardo Presilla.
+    Licencia GNU.
+    Ejemplo de Vue.js: Utilizando plantillas se comunica el Vue.js con un 
+    servicio y muestra el resultado con formato y efectos de bootstrap versión 3.
+    Uso del axios para crear las peticiones al servicio API.
+    Aplicando filtros y métodos.
+-->
+<html>
+    <head>
+        <title>Vue.js 28: Comunicación con API y filtros.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link href="css/estilos.css" rel="stylesheet" /> 
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js" charset="UTF-8"></script>
+        <!-- Librerias para el axios -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Formato de fechas -->
+        <script src="js/moment.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="app" class="">
+                <div id="ciclo" class="proyecto" v-for="proyecto in projects">
+                    <div class="panel">
+                        <div class="panel-heading panel-info">
+                            <h2>{{ proyecto.title }}</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p>Descripción: {{ proyecto.description }}</p>
+                        </div>
+                        <div class="panel-footer">
+                            <p>Actualizado el: {{ proyecto.updated_at | formateDate('DD MM YYYY') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/app.js" type="text/javascript"></script>
+    </body>
+</html>
