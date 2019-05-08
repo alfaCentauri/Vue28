@@ -1,5 +1,5 @@
 /* 
- * Copyright (C) 2019 ricardo
+ * Copyright (C) 2019 Ingeiero en Computación: Ricardo Presilla.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,6 +29,11 @@ var vue = new Vue({
             {title: "Proyecto 4", description: "Descripción del proyecto #4...", updated_at: "2019-05-08 11:01:00"},
         ],
     },
+    filters: {
+        formateDate: function( date, outputFormat) {
+            return moment(date).format(outputFormat);
+        }
+    },
     mounted: function(){//Función en el Ciclo de vida del Vue.js ciclo mounted.
         var serverURL = 'http://172.104.91.187/projects';
         var _this = this;
@@ -38,12 +43,7 @@ var vue = new Vue({
             responseType: 'json', // default
             responseEncoding: 'utf8', // default
             // `data` is the data to be sent as the request body
-            data: {},
-            filters: {
-                formateDate: function( date, outputFormat) {
-                    return moment(date).format(outputFormat);
-                }
-            },
+            data: {},            
             // `headers` are custom headers to be sent
             headers: {
                 'Content-Type': 'application/json',
