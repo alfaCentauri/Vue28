@@ -29,6 +29,11 @@ var vue = new Vue({
             {title: "Proyecto 4", description: "Descripción del proyecto #4...", updated_at: "2019-05-08 11:01:00"},
         ],
     },
+    methods: {
+        deleteProject: function(project){
+            console.warn("Eliminar el proyecto: ", project);
+        },
+    },
     filters: {
         formateDate: function( date, outputFormat) {
             return moment(date).format(outputFormat);

@@ -34,6 +34,7 @@
                         </div>
                         <div class="panel-body">
                             <p>Descripción: {{ proyecto.description }}</p>
+                            <button class="btn btn-danger" v-on:click="deleteProject(proyecto)">Eliminar Proyecto</button>
                         </div>
                         <div class="panel-footer">
                             <p>Actualizado el: {{ proyecto.updated_at | formateDate('DD MM YYYY') }}</p>
