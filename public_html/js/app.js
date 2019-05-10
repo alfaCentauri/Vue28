@@ -22,12 +22,7 @@
 var vue = new Vue({
     el: '#app',
     data: {
-        projects: [
-            {title: "Proyecto 1", description: "Descripción del proyecto #1...", updated_at: "2019-05-08 11:01:00"},
-            {title: "Proyecto 2", description: "Descripción del proyecto #2...", updated_at: "2019-05-08 11:01:00"},
-            {title: "Proyecto 3", description: "Descripción del proyecto #3...", updated_at: "2019-05-08 11:01:00"},
-            {title: "Proyecto 4", description: "Descripción del proyecto #4...", updated_at: "2019-05-08 11:01:00"},
-        ],
+        projects: [],
     },
     methods: {
         deleteProject: function(project){

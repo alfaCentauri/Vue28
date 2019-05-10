@@ -21,3 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 .proyecto{
     color: #222;
 }
+[v-cloak]{
+    display: none;
+}
